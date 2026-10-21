@@ -18,3 +18,7 @@ jobs:
         with:
           gradle-version: '8.10.2'
       - run: gradle -p MailFlowAndroidDemo assemble
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MailFlow-APK
+          path: MailFlowAndroidDemo/app/build/outputs/apk/debug/app-debug.apk
